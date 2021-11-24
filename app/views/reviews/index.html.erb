@@ -1,0 +1,19 @@
+<h1>Reviews#review</h1>
+<p>Find me in app/views/reviews/review.html.erb</p>
+<ol>
+  <% @reviews.each do |review| %>
+  <li>
+    <p><strong><%= review.restaurant.name %></strong></p>
+    <p><%= review.rating %></p>
+    <p><%= review.content %></p>
+
+    <%= link_to 'More details', restaurant_path(review.restaurant) %>
+    <%= link_to 'Edit', edit_restaurant_path(review.restaurant) %>
+    <%= link_to 'Delete', restaurant_path(review.restaurant), method: :delete %>
+  </li>
+  <% end %>
+</ol>
+<br />
+<br />
+<br />
+<%= link_to 'Create new restaurant', new_restaurant_review_path %>

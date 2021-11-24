@@ -1,0 +1,13 @@
+<h1>Restaurants#show</h1>
+<p>Find me in app/views/restaurants/show.html.erb</p>
+
+<p>Name: <%= @restaurant.name %></p>
+<p>Address: <%= @restaurant.address %></p>
+<p>Phone number: <%= @restaurant.phone_number %></p>
+<p>Category: <%= @restaurant.category %></p>
+
+<%= link_to 'back to home', restaurants_path %>
+<%= link_to 'edit', edit_restaurant_path %>
+<%= link_to 'delete', restaurant_path, method: :delete %>
+<br />
+
