@@ -16,9 +16,9 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     if @restaurant.save
-      redirect_to restaurants_path, alert: 'Restaurant created successfully.'
+      redirect_to restaurant_path(@restaurant), alert: 'Restaurant created successfully.'
     else
-      redirect_to new_restaurant_path, alert: 'Error creating restaurant.'
+      render new_restaurant_path
     end
   end
 
